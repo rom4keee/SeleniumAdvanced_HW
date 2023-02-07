@@ -13,11 +13,11 @@ import java.util.Map;
 
 public class AddProductToBasket {
 
-    private HomePage homePage = new HomePage();
-    private BasketPage basketPage = new BasketPage();
-    private CheckoutPage checkoutPage = new CheckoutPage();
-    private SearchResultPage searchResultPage = new SearchResultPage();
-    private BasketPopUp basketBasketPopUp = new BasketPopUp();
+    private final HomePage homePage = new HomePage();
+    private final BasketPage basketPage = new BasketPage();
+    private final CheckoutPage checkoutPage = new CheckoutPage();
+    private final SearchResultPage searchResultPage = new SearchResultPage();
+    private final BasketPopUp basketBasketPopUp = new BasketPopUp();
 
     @Given("the user opens Book Depository website")
     public void openBookDepositoryWebsite() {
@@ -36,7 +36,7 @@ public class AddProductToBasket {
 
     @And("Search results page with URL {string} is displayed")
     public void searchResultsPageWithURLIsDisplayed(String expectedURL) {
-        Assert.assertEquals("Page URL is incorrect", expectedURL, searchResultPage.getPageUrl(pageURL));
+        Assert.assertEquals("Page URL is incorrect", expectedURL, searchResultPage.getPageUrl());
     }
 
     @When("the user clicks Add to basket button for product with name Camilla, Duchess of Cornwall")
