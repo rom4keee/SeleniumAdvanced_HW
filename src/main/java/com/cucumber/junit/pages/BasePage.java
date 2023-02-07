@@ -14,7 +14,7 @@ public class BasePage extends PageFactory {
         PageFactory.initElements(getDriver(),this);
     }
 
-    public String getPageUrl() {
+    public String getPageUrl(String pageURL) {
         return getDriver().getCurrentUrl();
     }
     private static final Map<String, String> expectedUrlList;
